@@ -1,4 +1,4 @@
-package leetcode.medium.best_time_to_buy_and_sell_stock_II;
+package leetcode.medium;
 
 public class BestTimeToBuyAndSellStockII {
     public static void main(String[] args) {

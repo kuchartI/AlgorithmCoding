@@ -1,6 +1,6 @@
 package leetcode.hard.median_of_two_sorted_arrays;
 
-public class MOTSA {
+public class MedianOfTwoSortedArrays {
     public static void main(String[] args) {
         System.out.println(findMedianSortedArrays(new int[]{2, 2, 4, 4}, new int[]{2, 2, 4, 4}));
     }

@@ -1,10 +1,10 @@
-package leetcode.medium.longest_substring_without_repeating_characters;
+package leetcode.medium;
 
 import java.util.HashMap;
 import java.util.Map;
 
 
-public class LSVRC {
+public class LongestSubstringWithoutRepeatingCharacters {
     public static void main(String[] args) {
         System.out.println(lengthOfLongestSubstring("kdlajsdowqiwrqwpla"));
     }

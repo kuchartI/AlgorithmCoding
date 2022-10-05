@@ -1,6 +1,6 @@
-package leetcode.medium.longest_palindromic_substring;
+package leetcode.medium;
 
-public class LPS {
+public class LongestPalindromicSubstring {
     public static void main(String[] args) {
         System.out.println(longestPalindrome("asdweraaaaaaar"));
     }
