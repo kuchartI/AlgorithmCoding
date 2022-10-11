@@ -1,5 +1,6 @@
-package leetcode.medium.path_sum
+package leetcode.medium.binary_tree
 
+//112. Path Sum
 fun main() {
     val root = TreeNode(5)
     root.left = TreeNode(4)

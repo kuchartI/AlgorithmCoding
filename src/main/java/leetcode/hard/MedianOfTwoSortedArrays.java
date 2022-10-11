@@ -1,4 +1,4 @@
-package leetcode.hard.median_of_two_sorted_arrays;
+package leetcode.hard;
 
 public class MedianOfTwoSortedArrays {
     public static void main(String[] args) {
