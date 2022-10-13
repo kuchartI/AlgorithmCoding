@@ -1,19 +1,19 @@
-package leetcode.medium.add_two_numbers;
+package leetcode.medium.list_node;
 
 public class AddTwoNumbers {
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(9, new ListNode());
-        ListNode l2 = new ListNode(9, new ListNode());
-        l1.next = new ListNode(9, new ListNode());
-        l1.next.next = new ListNode(9);
-        l2.next = new ListNode(9, null);
+        ListNodeJava l1 = new ListNodeJava(9, new ListNodeJava());
+        ListNodeJava l2 = new ListNodeJava(9, new ListNodeJava());
+        l1.next = new ListNodeJava(9, new ListNodeJava());
+        l1.next.next = new ListNodeJava(9);
+        l2.next = new ListNodeJava(9, null);
         System.out.println(addTwoNumbers(l1, l2));
     }
 
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode resultNode = new ListNode();
-        ListNode resultRef = resultNode;
-        ListNode endList;
+    public static ListNodeJava addTwoNumbers(ListNodeJava l1, ListNodeJava l2) {
+        ListNodeJava resultNode = new ListNodeJava();
+        ListNodeJava resultRef = resultNode;
+        ListNodeJava endList;
         byte remainder = 0;
         while (true) {
             if (l1 == null) {
@@ -31,8 +31,8 @@ public class AddTwoNumbers {
                         resultNode.val = remainder + l2.val + l1.val;
                         remainder = 0;
                     }
-                    endList = remainder == 1 ? new ListNode(remainder) : null;
-                    resultNode.next = l1.next == null && l2.next == null ? endList : new ListNode();
+                    endList = remainder == 1 ? new ListNodeJava(remainder) : null;
+                    resultNode.next = l1.next == null && l2.next == null ? endList : new ListNodeJava();
                     resultNode = resultNode.next;
                     l1 = l1.next;
                     l2 = l2.next;
@@ -45,8 +45,8 @@ public class AddTwoNumbers {
         return resultRef;
     }
 
-    private static void countRemainder(ListNode l1, ListNode resultNode, byte remainder) {
-        ListNode endList;
+    private static void countRemainder(ListNodeJava l1, ListNodeJava resultNode, byte remainder) {
+        ListNodeJava endList;
         while (l1 != null) {
             if (remainder + l1.val > 9) {
                 resultNode.val = (remainder + l1.val) % 10;
@@ -55,8 +55,8 @@ public class AddTwoNumbers {
                 resultNode.val = remainder + l1.val;
                 remainder = 0;
             }
-            endList = remainder == 1 ? new ListNode(remainder) : null;
-            resultNode.next = l1.next == null ? endList : new ListNode();
+            endList = remainder == 1 ? new ListNodeJava(remainder) : null;
+            resultNode.next = l1.next == null ? endList : new ListNodeJava();
             resultNode = resultNode.next;
             l1 = l1.next;
         }

@@ -1,17 +1,17 @@
-package leetcode.medium.add_two_numbers;
+package leetcode.medium.list_node;
 
-public class ListNode {
+public class ListNodeJava {
     int val;
-    ListNode next;
+    ListNodeJava next;
 
-    ListNode() {
+    ListNodeJava() {
     }
 
-    ListNode(int val) {
+    ListNodeJava(int val) {
         this.val = val;
     }
 
-    ListNode(int val, ListNode next) {
+    ListNodeJava(int val, ListNodeJava next) {
         this.val = val;
         this.next = next;
     }
@@ -19,7 +19,7 @@ public class ListNode {
     @Override
     public String toString() {
         String res = String.valueOf(val);
-        ListNode refList = this.next;
+        ListNodeJava refList = this.next;
         while (refList != null) {
             res = res.concat(String.valueOf(refList.val));
             refList = refList.next;
