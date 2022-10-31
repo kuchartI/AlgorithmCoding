@@ -1,6 +1,7 @@
 package leetcode.medium;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 //692. Top K Frequent Words
 class TopKFrequentWords {
@@ -22,6 +23,6 @@ class TopKFrequentWords {
                 .sorted((v1, v2) ->
                         v2.getValue().compareTo(v1.getValue()) == 0 ?
                                 v1.getKey().compareTo(v2.getKey()) : v2.getValue().compareTo(v1.getValue()))
-                .map(Map.Entry::getKey).limit(k).toList();
+                .map(Map.Entry::getKey).limit(k).collect(Collectors.toList());
     }
 }
